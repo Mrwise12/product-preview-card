@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRC</title>
+  <link rel="icon" href="icons/favicon-32x32.png">
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container main-container">
+    <div class="row">
+      <div class="big col-lg-6 col-md-6 col-sm-12">
+        <img src="icons/image-product-desktop.jpg" width="300" class="img-desktop d-none d-md-block" alt=""> 
+        <img src="icons/image-product-mobile.jpg"  class="img-mobile d-md-none" width="300"  alt="">
+      </div>
+
+        <div class="bigger col-lg-6 col-md-6 col-sm-12">
+            <p class="p1">PERFUME</p>
+            <p class="p2">Gabrielle Essence Eau De Parfum</p>
+          <p class="p3"> A floral, solar and voluptous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+
+          <span class="p4">$149.99</span> <sup><span>$169.99</span> </sup> 
+          <div >
+            <button class="button">
+              <img src="icons/icon-cart.svg" alt=""> Add to Cart
+            </button>
+          </div>
+        </div>
+  </div>
+
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ogbo Victor</a>.
+  </div>
+
+  <script>
+    function updateImage() {
+      const container = document.querySelector('.container');
+      const imgDesktop = container.querySelector('.img-desktop');
+      const imgMobile = container.querySelector('.img-mobile');
+  
+      if (window.innerWidth >= 768) {
+        imgDesktop.style.display = 'block';
+        imgMobile.style.display = 'none';
+      } else {
+        imgDesktop.style.display = 'none';
+        imgMobile.style.display = 'block';
+      }
+    }
+  
+    window.addEventListener('resize', updateImage);
+    window.addEventListener('load', updateImage);
+  </script>
+  
+</body>
+</html>
